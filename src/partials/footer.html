@@ -1,15 +1,73 @@
-<footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+<footer class="footer" id="footer">
+  <div class="container footer-bg">
+    <div class="footer-first-group">
+    <picture class="footer-img">
+      <source
+        srcset="
+          /img/footer/footer-logo.webp 1x,
+          /img/footer/footer-logo-2x.webp 2x
+        "
+        media="(min-width: 1158px)"
+      />
+      <source
+        srcset="
+        /img/footer/footer-logo-tab.webp    1x,
+        /img/footer/footer-logo-tab-2x.webp 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+        /img/footer/footer-logo-mob.webp    1x,
+        /img/footer/footer-logo-mob-2x.webp 2x
+        "
+        media="(max-width: 767px)"
+      />
+      <img
+        srcset="
+        /img/footer/footer-logo.webp    1x,
+        /img/footer/footer-logo-2x.webp 2x
+        "
+        src="/img/footer/footer-logo.webp"
+        alt="logo"
+        class="footer-logo"
+        width="44"
+        loading="lazy"
+      />
+    </picture>
+
+     <h1 class="footer-title">let`s <span class="footer-span">work</span></h1>
+     <h1 class="footer-title"> together</h1>
+  </div>
+
+  <div class="footer-second-group">
+   <form class="footer-form" autocomplete="off">
+    <label>
+      <input class="footer-form-item" type="email" name="email"  pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" placeholder="clients@gmail.com"   autofocus />
+    </label>
+    <label>
+      <input class="footer-form-item" name="comments" placeholder="comments"/>
+    </label>
+    <button class="footer-button" type="submit">Send</button>
+  </form>
+  </div>
+
+  <div class="footer-third-group">
+  <address class="footer-adress">
+    <ul class="list-address">
+        <li class="address-item"> 
+            <a class="address-link" href="lloydjefferson@gmail.com">lloydjefferson@gmail.com</a>
+        </li>
+        <li class="address-item">
+            <a href="tel:+3801111111111" class="address-link">+380 11 1111 11 11</a>
+        </li>
+        </ul>
+  </address>
+  </div>
+
+
   </div>
 </footer>
+
+
+

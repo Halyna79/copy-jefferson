@@ -1,19 +1,42 @@
 <header class="header">
   <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="header__container">
+      <div class="container-inner">
+        <div class="logo-block">
+          <a href="#">
+            <picture>
+              <source
+                srcset="/img/header/profile-logo@2x.webp"
+                media="(min-resolution: 192dpi)"
+              />
+              <img src="/img/header/profile-logo.webp" alt="logo" />
+            </picture>
+            <span>jefferson*</span>
+          </a>
+        </div>
+        <div class="nav-block">
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="#" class="nav-menu">Menu</a>
+              <ul class="submenu">
+                <li><a href="#about">About me</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#faq">FAQ</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="button-item">
+          <button class="header-button" id="scroll-to-footer">
+            Order the project
+          </button>
+          <button class="burger">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </header>

@@ -1,0 +1,151 @@
+.hero {
+  background-image: url('../img/hero/red-drapes-mob.png');
+  background-image: image-set(
+    url('../img/hero/red-drapes-mob.png') 1x,
+    url('../img/hero/red-drapes-mob-2x.png') 2x
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+
+  padding-top: 281px;
+  padding-bottom: 281px;
+}
+
+h1 span {
+  display: block;
+  padding-top: 4px;
+}
+
+.list {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.link {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--main-text);
+
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 50%;
+  padding: 10px 12px;
+  flex-shrink: 0;
+  width: 37px;
+  height: 37px;
+}
+
+.link:hover {
+  border: 1px solid rgb(250, 250, 250);
+}
+
+.social-list .social:nth-child(2) .link {
+  padding: 10px;
+}
+.social-list .social:nth-child(3) .link {
+  padding: 10px 11px;
+}
+.social-list .social:nth-child(4) .link {
+  padding: 10px 8px;
+}
+
+.email_address {
+  display: flex;
+  align-items: flex-end;
+}
+
+.link_email {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 10px 12px;
+  width: 178px;
+  height: 37px;
+  font-size: 14px;
+  color: var(--main-text);
+}
+
+.link_email:hover {
+  border: 1px solid rgb(250, 250, 250);
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .hero {
+    background-image: url('../img/hero/red-drapes-tab.png');
+    background-image: image-set(
+      url('../img/hero/red-drapes-tab.png') 1x,
+      url('../img/hero/red-drapes-tab-2x.png') 2x
+    );
+  }
+
+  .hero-title {
+    font-size: 90px;
+    padding-top: 300px;
+    padding-bottom: 274px;
+  }
+
+  .list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .social-list {
+    gap: 8px;
+  }
+
+  .link {
+    padding: 18px 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 16px;
+  }
+
+  .social-list .social:nth-child(2) .link {
+    padding: 18px 17px;
+  }
+  .social-list .social:nth-child(3) .link {
+    padding: 18px;
+  }
+  .social-list .social:nth-child(4) .link {
+    padding: 18px 16px;
+  }
+
+  .link_email {
+    padding: 18px 24px;
+    width: 223px;
+    height: 55px;
+
+    font-size: 16px;
+  }
+}
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1200px) {
+  .hero {
+    background-image: url('../img/hero/red-drapes.png');
+    background-image: image-set(
+      url('../img/hero/red-drapes.png') 1x,
+      url('../img/hero/red-drapes-2x.png') 2x
+    );
+  }
+
+  .hero-title {
+    padding-bottom: 330px;
+    padding-left: 178px;
+  }
+}
