@@ -18,18 +18,22 @@
 }
 
 .projects-slide {
-    display: none;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     opacity: 0;
+    visibility: hidden;
     transition: opacity 0.5s ease-in-out;
 }
 
 .projects-slide.active {
-    display: flex;
+    /* display: flex; */
     opacity: 1;
+    visibility: visible;
 }
 
 .projects-info {
