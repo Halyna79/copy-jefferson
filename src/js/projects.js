@@ -11,8 +11,8 @@ function initProjectSwiper(selector) {
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
-      nextEl: ${selector} .next-slide,
-      prevEl: ${selector} .prev-slide,
+      nextEl: `${selector} .next-slide`,
+      prevEl: `${selector} .prev-slide`,
     },
     keyboard: {
       enabled: true,
