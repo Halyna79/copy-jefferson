@@ -27,3 +27,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const scrollToFooterBtn = document.getElementById('scroll-to-footer');
   const footerSection = document.getElementById('footer');
+
+  if (scrollToFooterBtn) {
+    scrollToFooterBtn.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      if (footerSection) {
+        window.scrollTo({
+          top: footerSection.offsetTop,
+          behavior: 'smooth',
+        });
+      } else {
+        console.error('Footer section not found!');
+      }
+    });
+  }
+});
