@@ -126,16 +126,12 @@
     background-color: #242528;
 }
 
-.prev[disabled],
-.next[disabled] {
-    outline: 1px solid rgba(250, 250, 250, 0.2);
-    color: rgba(250, 250, 250, 0.2);
-    cursor: not-allowed;
-}
-
 .disabled {
     opacity: 0.5;
     pointer-events: none;
+    outline: 1px solid rgba(250, 250, 250, 0.2);
+    color: rgba(250, 250, 250, 0.2);
+    cursor: not-allowed;
 }
 
 @media (min-width: 768px) {
