@@ -5,22 +5,25 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentIndex = 0;
 
     function updateSlides() {
-        slides.forEach(slide => slide.classList.remove('active'));
-        slides[currentIndex].classList.add('active');
+        slides.forEach((slide, index) => {
+            slide.classList.toggle('active', index === currentIndex);
+        });
+
         prevBtn.classList.toggle('disabled', currentIndex === 0);
         nextBtn.classList.toggle('disabled', currentIndex === slides.length - 1);
     }
-    updateSlides();
+    
     nextBtn.addEventListener('click', () => {
-        if (currentIndex < slides.length - 1) {
+        if (!nextBtn.classList.contains("disabled") && currentIndex < slides.length - 1) {
             currentIndex++;
             updateSlides();
         }
     });
     prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
+        if (!prevBtn.classList.contains("disabled") && currentIndex > 0) {
             currentIndex--;
             updateSlides();
         }
     });
-})
+    updateSlides();
+});
