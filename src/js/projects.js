@@ -1,29 +1,33 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.querySelectorAll(".projects-slide");
-    const prevBtn = document.querySelector(".prev-slide");
-    const nextBtn = document.querySelector(".next-slide");
-    let currentIndex = 0;
+import Swiper from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
-    function updateSlides() {
-        slides.forEach((slide, index) => {
-            slide.classList.toggle('active', index === currentIndex);
-        });
+function initProjectSwiper(selector) {
+  const container = document.querySelector(selector);
+  if (!container) return; // Якщо контейнера немає, функція не виконується
 
-        prevBtn.classList.toggle('disabled', currentIndex === 0);
-        nextBtn.classList.toggle('disabled', currentIndex === slides.length - 1);
-    }
-    
-    nextBtn.addEventListener('click', () => {
-        if (!nextBtn.classList.contains("disabled") && currentIndex < slides.length - 1) {
-            currentIndex++;
-            updateSlides();
-        }
-    });
-    prevBtn.addEventListener('click', () => {
-        if (!prevBtn.classList.contains("disabled") && currentIndex > 0) {
-            currentIndex--;
-            updateSlides();
-        }
-    });
-    updateSlides();
-});
+  new Swiper(container, {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ${selector} .next-slide,
+      prevEl: ${selector} .prev-slide,
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1440: {
+        slidesPerView: 3,
+      },
+    },
+  });
+}
+
+// Викликаємо функцію для ініціалізації Swiper на секції projects
+initProjectSwiper('.projects-slider');
