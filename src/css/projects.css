@@ -17,6 +17,81 @@
     margin-bottom: 32px;
 }
 
+.projects-slider {
+    position: relative;
+    overflow: hidden;
+    /* Запобігає виходу слайдів за межі контейнера */
+    width: 100%;
+}
+
+/* Всі слайди всередині Swiper */
+.projects-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* Плавна зміна слайдів */
+}
+
+/* Окремий слайд */
+.projects-slide {
+    flex: 0 0 100%;
+    /* Кожен слайд займає всю ширину контейнера */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Активний слайд */
+.projects-slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Кнопки навігації */
+.projects-btn-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.projects-slider-btn {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.projects-slider-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.projects-slider-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: white;
+}
+
+/* Додаткові стилі для адаптивності */
+@media screen and (max-width: 768px) {
+    .projects-slide {
+        flex: 0 0 100%;
+    }
+
+    .projects-slider-btn {
+        width: 30px;
+        height: 30px;
+    }
+}
+
 .projects-slide {
     /* display: flex;
     flex-direction: column;
