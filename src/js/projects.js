@@ -31,3 +31,4 @@ function initProjectSwiper(selector) {
 
 // Викликаємо функцію для ініціалізації Swiper на секції projects
 initProjectSwiper('.projects-slider');
+

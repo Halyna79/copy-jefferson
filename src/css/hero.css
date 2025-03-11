@@ -1,9 +1,7 @@
 .hero {
   background-image: url('../img/hero/red-drapes-mob.png');
-  background-image: image-set(
-    url('../img/hero/red-drapes-mob.png') 1x,
-    url('../img/hero/red-drapes-mob-2x.png') 2x
-  );
+  background-image: image-set(url('../img/hero/red-drapes-mob.png') 1x,
+      url('../img/hero/red-drapes-mob-2x.png') 2x);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,10 +17,12 @@
   padding-bottom: 281px;
 }
 
+
 h1 span {
   display: block;
   padding-top: 4px;
 }
+
 
 .list {
   display: flex;
@@ -57,9 +57,11 @@ h1 span {
 .social-list .social:nth-child(2) .link {
   padding: 10px;
 }
+
 .social-list .social:nth-child(3) .link {
   padding: 10px 11px;
 }
+
 .social-list .social:nth-child(4) .link {
   padding: 10px 8px;
 }
@@ -87,10 +89,8 @@ h1 span {
 @media only screen and (min-width: 768px) {
   .hero {
     background-image: url('../img/hero/red-drapes-tab.png');
-    background-image: image-set(
-      url('../img/hero/red-drapes-tab.png') 1x,
-      url('../img/hero/red-drapes-tab-2x.png') 2x
-    );
+    background-image: image-set(url('../img/hero/red-drapes-tab.png') 1x,
+        url('../img/hero/red-drapes-tab-2x.png') 2x);
   }
 
   .hero-title {
@@ -119,9 +119,11 @@ h1 span {
   .social-list .social:nth-child(2) .link {
     padding: 18px 17px;
   }
+
   .social-list .social:nth-child(3) .link {
     padding: 18px;
   }
+
   .social-list .social:nth-child(4) .link {
     padding: 18px 16px;
   }
@@ -134,14 +136,13 @@ h1 span {
     font-size: 16px;
   }
 }
+
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1200px) {
   .hero {
     background-image: url('../img/hero/red-drapes.png');
-    background-image: image-set(
-      url('../img/hero/red-drapes.png') 1x,
-      url('../img/hero/red-drapes-2x.png') 2x
-    );
+    background-image: image-set(url('../img/hero/red-drapes.png') 1x,
+        url('../img/hero/red-drapes-2x.png') 2x);
   }
 
   .hero-title {

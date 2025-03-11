@@ -43,9 +43,11 @@
 .about-me-first-span {
   color: #ed3b44;
 }
+
 .about-me-second-span {
   color: rgba(250, 250, 250, 0.4);
 }
+
 .about-me-visit-card-photo {
   border-radius: 24px;
 }
@@ -111,6 +113,7 @@
 .ac .ac-trigger::after {
   display: none !important;
 }
+
 .accordion-container .ac .ac-panel .ac-text {
   padding: 0;
   padding-top: 12px;
@@ -130,8 +133,7 @@
   height: 18px;
 }
 
-@media (min-width: 768px) {
-}
+@media (min-width: 768px) {}
 
 /* === media === */
 
@@ -139,24 +141,30 @@
   .about-me-section {
     gap: 64px;
   }
+
   .about-me-visit-card-text {
     font-size: 38px;
     line-height: 105%;
     height: 700px;
     padding: 64px;
   }
+
   .about-me-info-item {
     gap: 8px;
   }
+
   .about-me-list {
     margin-bottom: 32px;
   }
+
   #ac-panel-0 .about-me-list {
     gap: 16px;
   }
+
   .ac .ac-header .ac-trigger {
     height: 40px;
   }
+
   .accordion-container .ac .ac-panel .ac-text {
     padding-top: 8px;
   }
@@ -167,12 +175,15 @@
     padding-top: 96px;
     gap: 96px;
   }
+
   .about-me-visit-card-text {
     width: 680px;
   }
+
   #ac-panel-0 .about-me-list {
     gap: 32px;
   }
+
   .accordion-container .ac .ac-panel .ac-text {
     margin-left: 696px;
     margin-right: 68px;
@@ -187,11 +198,13 @@
   max-width: 260px;
   overflow: hidden;
 }
+
 @media (min-width: 768px) {
   .about-me-list-skills {
     max-width: 600px;
   }
 }
+
 @media (min-width: 1440px) {
   .about-me-list-skills {
     max-width: 1200px;
@@ -208,6 +221,7 @@
   justify-content: center;
   flex-shrink: 0;
 }
+
 @media (min-width: 768px) {
   .about-me-item-skill {
     width: 200px;
