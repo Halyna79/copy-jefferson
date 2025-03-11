@@ -4,8 +4,12 @@
   left: 0;
   width: 100%;
   background: transparent;
-  padding: 32px 0;
   z-index: 1000;
+}
+
+.header-container {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .container-inner {
@@ -47,12 +51,15 @@ button.header-button:hover {
   font-weight: 500;
   color: #fafafa;
 }
+
 .nav-item a {
   text-decoration: underline;
 }
+
 .nav-item ul a {
   text-decoration: none;
 }
+
 .nav-item {
   position: relative;
   display: flex;
@@ -63,28 +70,25 @@ button.header-button:hover {
 }
 
 ul.submenu {
+  display: none;
   position: absolute;
   min-width: max-content;
   top: 100%;
   left: 50%;
-  padding-top: 13.5px;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translate(-50%, -10px);
   text-align: center;
   padding: 8px 12px;
 }
 
-.nav-block {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
 .nav-item.active ul.submenu {
+  display: block;
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
   transform: translate(-50%, 0);
 }
 
@@ -111,6 +115,10 @@ ul.submenu {
   transition: all 0.3s ease;
 }
 
+.burger:hover span {
+  background-color: #ed3b44;
+}
+
 .burger span:first-child {
   top: 0;
 }
@@ -128,6 +136,10 @@ ul.submenu {
 }
 
 @media (max-width: 767px) {
+  .header-container {
+    padding: 32px 16px 0;
+  }
+
   .nav-block {
     display: none;
   }
@@ -142,20 +154,10 @@ ul.submenu {
 }
 
 @media (min-width: 768px) {
-  .burger {
-    display: none;
+  .header-container {
+    padding: 32px 32px 0;
   }
 
-  .nav-block {
-    display: block;
-  }
-
-  .header-button {
-    display: block;
-  }
-}
-
-@media (min-width: 1440px) {
   .burger {
     display: none;
   }

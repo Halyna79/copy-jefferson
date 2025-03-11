@@ -46,6 +46,7 @@
   right: 22px;
   cursor: pointer;
 }
+
 .close svg {
   width: 28px;
   height: 28px;
@@ -53,6 +54,7 @@
   stroke: #fafafa;
   stroke-width: 2;
 }
+
 .close:hover svg {
   stroke: #ed3b44;
   transition: stroke 0.3s ease-in-out;
@@ -82,6 +84,7 @@
 .menu-open .mobile-box {
   transform: translateX(0);
 }
+
 body.no-scroll {
   overflow: hidden;
 }
@@ -91,7 +94,9 @@ body.no-scroll {
     display: none;
   }
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
   .mobile-box {
     background: url(/img/mob-menu/Glass-effect-2x.png) center/cover no-repeat;
   }

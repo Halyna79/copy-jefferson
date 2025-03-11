@@ -1,37 +1,42 @@
 <header class="header">
-  <div class="container">
+  <div class="container header-container">
     <div class="header__container">
       <div class="container-inner">
         <div class="logo-block">
-          <a href="#">
+          <a href="#" aria-label="Homepage">
             <picture>
-              <source
-                srcset="/img/header/profile-logo@2x.webp"
-                media="(min-resolution: 192dpi)"
-              />
-              <img src="/img/header/profile-logo.webp" alt="logo" />
+              <source type="image/webp" srcset="
+                  /img/header/profile-logo.webp    1x,
+                  /img/header/profile-logo-2x.webp 2x
+                " />
+              <img srcset="
+                  /img/header/profile-logo.webp    1x,
+                  /img/header/profile-logo-2x.webp 2x
+                " src="/img/header/profile-logo.webp" alt="Jefferson company logo" width="80" loading="lazy" />
             </picture>
             <span>jefferson*</span>
           </a>
         </div>
-        <div class="nav-block">
+        <nav class="nav-block" role="navigation">
           <ul class="nav">
             <li class="nav-item">
-              <a href="#" class="nav-menu">Menu</a>
-              <ul class="submenu">
-                <li><a href="#about">About me</a></li>
+              <a href="#" class="nav-menu" aria-expanded="false" aria-haspopup="true" aria-controls="submenu">
+                Menu
+              </a>
+              <ul class="submenu" id="submenu" hidden>
+                <li><a href="#about-me">About me</a></li>
                 <li><a href="#benefits">Benefits</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#faq">FAQ</a></li>
               </ul>
             </li>
           </ul>
-        </div>
+        </nav>
         <div class="button-item">
-          <button class="header-button" id="scroll-to-footer">
+          <button class="header-button" id="scroll-to-footer" aria-label="Order the project">
             Order the project
           </button>
-          <button class="burger">
+          <button class="burger" aria-label="Open navigation" role="button">
             <span></span>
             <span></span>
           </button>
