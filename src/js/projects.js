@@ -1,24 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".projects-slide");
-    const prevBtn = document.querySelector(".projects-slider-btn.prev");
-    const nextBtn = document.querySelector(".projects-slider-btn.next");
+    const prevBtn = document.querySelector(".prev-slide");
+    const nextBtn = document.querySelector(".next-slide");
     let currentIndex = 0;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.remove("active");
-            if (i === index) {
-                slide.classList.add("active");
-            }
-        });
+    function updateSlides() {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[currentIndex].classList.add('active');
+        prevBtn.classList.toggle('disabled', currentIndex === 0);
+        nextBtn.classList.toggle('disabled', currentIndex === slides.length - 1);
     }
-    prevBtn.addEventListener("click", function () {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        showSlide(currentIndex);
+    updateSlides();
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < slides.length - 1) {
+            currentIndex++;
+            updateSlides();
+        }
     });
-    nextBtn.addEventListener("click", function () {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSlides();
+        }
     });
-    showSlide(currentIndex);
-});
+})
