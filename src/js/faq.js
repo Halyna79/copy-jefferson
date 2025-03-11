@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         showMultiple: true,
     });
 
-    const accordionButtons = document.querySelectorAll(".icon-accordion-close");
+    const accordionButtons = document.querySelectorAll(".button-accordion");
 
     accordionButtons.forEach((button) => {
         const topicButton = button.closest(".topic-button");
@@ -17,13 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!question) return;
 
         button.addEventListener("click", () => {
-            const isOpen = question.style.display === "block";
+            question.classList.toggle("open");
+            const isOpen = question.classList.contains("open");
             if (isOpen) {
-                question.style.display = "none";
-                icon.setAttribute("href", "/copy-jefferson/assets/icons-BXQt0PIq.svg#icon-accordion-closesvg");
+                icon.setAttribute("href", "/Code-Academy/assets/icons-BXQt0PIq.svg#icon-accordion-opensvg");
             } else {
-                question.style.display = "block";
-                icon.setAttribute("href", "/copy-jefferson/assets/icons-BXQt0PIq.svg#icon-accordion-opensvg");
+                icon.setAttribute("href", "/Code-Academy/assets/icons-BXQt0PIq.svg#icon-accordion-closesvg");
             }
         });
     });

@@ -1,15 +1,13 @@
 
 .footer-bg {
+    padding-left: -16px;
     background-image: url('/img/hero/black-drapes.png');
-    background-image: image-set(
-      url('/img/hero/black-drapes.png') 1x,
-      url('/img/hero/black-drapes-2x.png') 2x
-    );
-    width: 728px;
-    height: 679px;
+    background-image: image-set(url('/img/hero/black-drapes.png') 1x,
+            url('/img/hero/black-drapes-2x.png') 2x);
+
     background-size: no-repeat;
     background-position: right top;
-  }
+}
 
 
 .footer-first-group {
@@ -17,34 +15,47 @@
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 63px;
+    width: 100%;
 }
 
 .footer-title {
-font-weight: 500;
-font-size: 40px;
-line-height: 100%;
-letter-spacing: -0.03em;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .footer-span {
-color: #ED3B44;
+    color: #ED3B44;
+}
+
+.footer-span::before {
+    content: "/";
+    color: #1C1D20;
 }
 
 .footer-form {
-display: flex;
-flex-wrap: wrap;
-gap: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
 .footer-form-item {
-  width: 343px;
-  border: none;
-  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-  background-color: transparent;
-  color: #FAFAFA;
-  outline: none;
-  padding-bottom: 20px;
+    width: 343px;
+    border: none;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.6);
+    background-color: transparent;
+    color: #FAFAFA;
+    text-overflow: ellipsis;
+    outline: none;
+    padding-bottom: 20px;
+    letter-spacing: -0.02em;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
+
+.footer-form-item:hover {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 
 .footer-button {
     margin-top: 16px;
@@ -54,6 +65,7 @@ gap: 16px;
     border-radius: 100%;
     color: #FAFAFA;
     text-align: center;
+    letter-spacing: -0.02em;
 }
 
 .list-address {
@@ -64,10 +76,10 @@ gap: 16px;
 
 .address-item {
     border: 1px solid rgba(250, 250, 250, 0.2);
-border-radius: 60px;
-padding: 10px 12px;
-height: 37px;
-text-align: center;
+    border-radius: 60px;
+    padding: 10px 12px;
+    height: 37px;
+    text-align: center;
 }
 
 .address-link {
@@ -77,76 +89,104 @@ text-align: center;
     color: #FAFAFA;
     font-style: normal;
     font-weight: 500;
-font-size: 14px;
-letter-spacing: -0.02em;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    transition: color border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-link:hover .address-item {
+    border: 1px solid #FAFAFA;
+}
+
+.address-link:focus .address-item {
+    border: 1px solid #FAFAFA;
+    color: 1px solid #FAFAFA;
+}
+
+
+.disable-scroll {
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @media only screen and (min-width: 768px) {
 
+    .footer {
+        margin-top: 32px;
+    }
+
     .footer-first-group {
+
         width: 542px;
         margin-bottom: 64px;
         flex-wrap: wrap;
-        margin-bottom: 0;
     }
 
     .footer-title {
         font-weight: 500;
-font-size: 64px;
-line-height: 100%;
-letter-spacing: -0.03em;
+        font-size: 64px;
+        line-height: 100%;
+        letter-spacing: -0.03em;
     }
 
     .footer-form {
+        flex-wrap: nowrap;
         align-items: center;
         padding: 0;
     }
 
     .footer-form-item {
         width: 245px;
+
     }
 
     .footer-button {
         margin-top: 0;
         width: 150px;
         height: 150px;
+        flex-shrink: 0;
     }
 
     .list-address {
         margin-top: 78px;
         gap: 8px;
     }
- 
+
     .address-item {
         height: 55px;
         padding: 18px 32px;
     }
 
-    address-link {
-font-size: 16px;
+    .address-link {
+        font-size: 16px;
     }
-    
-   
+
+
 }
 
-@media only screen and (min-width: 1280px) {
-    .footer {
-        padding: 80px 196px;
-    }
 
+@media only screen and (min-width: 1440px) {
+
+    footer {
+        padding: 58px 180px;
+    }
 
     .footer-first-group {
         width: 542px;
         margin-bottom: 64px;
         flex-wrap: wrap;
         column-gap: 20px;
-        row-gap: 10px;   
+        row-gap: 10px;
     }
 
- 
+
     .footer-form {
         gap: 32px;
-        
+
     }
 
     .footer-form-item {
@@ -155,5 +195,3 @@ font-size: 16px;
 
 
 }
-
-
