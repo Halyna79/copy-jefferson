@@ -1,34 +1,30 @@
-import Swiper from 'swiper';
+import Swiper from 'swiper/bundle';
 import 'swiper/css';
-import 'swiper/css/navigation';
 
-function initProjectSwiper(selector) {
-  const container = document.querySelector(selector);
-  if (!container) return; // Якщо контейнера немає, функція не виконується
+const projectSwiper = document.querySelector('.project-swiper');
+const swiper = new Swiper(projectSwiper, {
+  speed: 400,
+  spaceBetween: 100,
+  navigation: {
+    nextEl: '.button-swipe.next',
+    prevEl: '.button-swipe.back',
+  },
+});
 
-  new Swiper(container, {
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: `${selector} .next-slide`,
-      prevEl: `${selector} .prev-slide`,
-    },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1440: {
-        slidesPerView: 3,
-      },
-    },
-  });
+const slides = document.querySelectorAll('.swiper-slide');
+
+function updateActiveSlide() {
+ 
+  slides.forEach(slide => slide.querySelector('.projects-container').classList.remove('active'));
+  
+
+  const activeSlide = slides[swiper.activeIndex];
+  if (activeSlide) {
+    activeSlide.querySelector('.projects-container').classList.add('active');
+  }
 }
 
-// Викликаємо функцію для ініціалізації Swiper на секції projects
-initProjectSwiper('.projects-slider');
+swiper.on('slideChange', updateActiveSlide);
 
+
+updateActiveSlide();
