@@ -28,3 +28,18 @@ swiper.on('slideChange', updateActiveSlide);
 
 
 updateActiveSlide();
+
+// const nextBtn = document.querySelector('.button-swipe.next');
+// const backBtn = document.querySelector('.button-swipe.back');
+
+// // Функція для оновлення активності кнопок
+// function updateNavigationButtons() {
+//     nextBtn.classList.toggle('disabled', swiper.isEnd);
+//     backBtn.classList.toggle('disabled', swiper.isBeginning);
+// }
+
+// // Додаємо обробник подій для зміни слайду
+// swiper.on('slideChange', updateNavigationButtons);
+
+// // Викликаємо функцію одразу після ініціалізації Swiper, щоб оновити стан кнопок
+// updateNavigationButtons();
